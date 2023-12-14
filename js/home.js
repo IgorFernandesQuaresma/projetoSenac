@@ -2,7 +2,7 @@ const sectionFavoritos = document.querySelector('.lista-menu')
 const ulFavoritos = document.querySelector('#favoritos-lista')
 //const botao = document.querySelector('.favoritos-button')
 const ulFavoritosPgFavoritos = document.querySelector('#favoritos-lista-favoritos');
-console.log(ulFavoritosPgFavoritos);
+console.log('fsdf', ulFavoritosPgFavoritos);
 
 
 
@@ -69,16 +69,19 @@ console.log(ulFavoritosPgFavoritos);
     
 
     function adicionarAosFavoritos(itens) {
-      arrItens.push(itens);
-      localStorage.setItem('arrItens', JSON.stringify(arrItens)); 
+      const localStorageItens = localStorage.getItem('arrItens')
+      let initialLocalStorageItens = ''
+
+      if (localStorageItens !== null) {
+        initialLocalStorageItens = JSON.parse(localStorageItens)
+      }
+
+      localStorage.setItem('arrItens', JSON.stringify([...initialLocalStorageItens , itens])); 
       console.log("Item adicionado aos favoritos:", itens);
       ulFavoritosPgFavoritos.innerHTML = '';
       arrItens.forEach (arrItens => {
-        const itensFavoritos = criarItemLoja(arrItens);
-        ulFavoritosPgFavoritos.appendChild(itensFavoritos);
-        
       })
-}
+    }
 
 
 

@@ -88,6 +88,15 @@
 
 }
 
+.icon__ativo {
+
+    background-color: #ccced3;
+    padding: 5px;
+    border-radius: 12px; 
+
+
+}
+
 #favoritos-button-sacola {
     width: 20px;
 }
