@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Livros</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./js/estante.js" defer></script>
+  </head>
+  <body>
+    <header class="cabeçalho">
+      <div class="container">
+        <input type="checkbox" id="menu" class="container__botao" />
+        <label for="menu" class="container__rotulo">
+          <span class="cabeçalho__menu-hamburguer container__imagem"></span>
+        </label>
+        <ul class="lista-menu">
+          <li class="lista-menu__titulo">Categorias</li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Programação</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Front-end</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Infraestrutura</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Business</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Design & UX</a>
+          </li>
+        </ul>
+        <img
+          src="img/Logo.svg"
+          alt="Logo da Alurabooks"
+          class="container__imagem"
+        />
+        <h1 class="container__titulo">
+          <b class="container__titulo--negrito">Tech</b>Livros
+        </h1>
+      </div>
+
+      <ul class="opções">
+        <input type="checkbox" id="opções-menu" class="opções__botão" />
+        <label for="opções-menu" class="opções__rotulo">
+          <li class="opções__item">Categorias</li>
+        </label>
+
+        <ul class="lista-menu">
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Programação</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Front-end</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Infraestrutura</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Business</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Design & UX</a>
+          </li>
+        </ul>
+
+        <li class="opções__item">
+          <a href="./index.html" class="opções__link">Home</a>
+        </li>
+        <li class="opções__item">
+          <a href="./favoritos.html" class="opções__link">Favoritos</a>
+        </li>
+        <li class="opções__item">
+          <a href="#" class="opções__link">Minha estante</a>
+        </li>
+      </ul>
+
+      <div class="container">
+        <a href="#"
+          ><img
+            src="img/Favoritos.svg"
+            alt="Meus favoritos"
+            class="container__imagem container__imagem-transparente"
+        /></a>
+        <a href="#" class="container__link" id="cart-btn">
+          <img
+            src="img/Compras.svg"
+            alt="Carrinhos de compras"
+            class="container__imagem"
+          />
+          <p class="container__texto">Minha sacola</p>
+        </a>
+        <a href="#" class="container__link">
+          <img
+            src="img/Usuario.svg"
+            alt="Meu perfil"
+            class="container__imagem"
+          />
+          <p class="container__texto">Meu perfil</p>
+        </a>
+      </div>
+    </header>
+    <section class="banner">
+      <h2 class="banner__titulo">Já sabe por onde começar?</h2>
+      <p class="banner__texto">
+        Encontre em nossa estante o que precisa para seu desenvolvimento!
+      </p>
+      <input
+        type="search"
+        class="banner__pesquisa"
+        placeholder="Qual será sua próxima leitura?"
+      />
+    </section>
+
+    <section class="estante">
+      <div class="estante__content">
+        <h3 class="estante__titulo">Minha Estante</h3>
+        <div class="cards">
+          <div class="card">
+            <div class="img_card">
+              <img
+                src="img/ApacheKafka.svg"
+                alt="Imersão React"
+                class="card__capa"
+              />
+            </div>
+            <div class="article-card">
+              <h2 class="card__title">Apache kafka e Spring boot</h2>
+              <p class="card__subTitle">
+                comunicação assíncrona entre microsserviços
+              </p>
+            </div>
+            <div class="card-detalhes">
+              <div class="detalhar">
+                <details id="detalhes">
+                    <summary></summary>
+                  <p class="card__descricao">
+                    Pensar em comunicação assíncrona entre microsserviços é um
+                    caminho interessante quando a aplicação demanda serviços que
+                    podem demorar para responder. Para evitar problemas de
+                    timeouts e retentativas, utilizam-se filas ou tópicos, aos
+                    quais um processo adiciona uma mensagem informando o
+                    processamento a ser feito e outro a recebe quando estiver
+                    disponível e executa. O Kafka é atualmente um dos principais
+                    sistemas para a implementação de processamento assíncrono.
+                    Além de disponibilizar os tópicos para a produção e consumo
+                    de mensagens, suas diversas funcionalidades facilitam a
+                    implementação de nossas aplicações, com a distribuição e o
+                    balanceamento de carga entre os consumidores e o
+                    processamento de fluxos de dados. Neste livro, Eduardo
+                    Zambom Santana mostra a utilização do Kafka para fazer a
+                    comunicação assíncrona entre microsserviços implementados
+                    com o Spring Boot. Por meio de uma aplicação completa, você
+                    passará pela criação dos tópicos e a produção e consumo de
+                    mensagens, até chegar a partes mais complexas do Kafka, como
+                    a utilização de grupos de consumidores, o mecanismo de
+                    retentativas, testes unitário de código e o processamento de
+                    fluxo de dados com Kafka Streams.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="img_card">
+              <img
+                src="img/Javascript.svg"
+                alt="Imersão React"
+                class="card__capa"
+              />
+            </div>
+            <div class="article-card">
+              <h2 class="card__title">JavaScript Assertivo</h2>
+              <p class="card__subTitle">
+                Testes e qualidade de código em todas as camadas da aplicação
+              </p>
+            </div>
+            <div class="card-detalhes">
+              <div class="detalhar">
+                <details id="detalhes">
+                    <summary></summary>
+                  <p class="card__descricao" id="detalhes">
+                    Neste livro, Gabriel Ramos aborda as peculiaridades dos
+                    vários tipos de testes que compõem a pirâmide de testes, de
+                    modo que atinja as diferentes camadas das aplicações. Após
+                    passar pelos fundamentos necessários, você começará seu
+                    aprendizado prático com testes em uma CLI, com operações
+                    CRUD, avançando logo para uma aplicação back-end que expõe
+                    uma API com Node e Express, onde teremos testes de unidade e
+                    integração e alguns testes de carga. Partindo para o
+                    front-end, você testará códigos de navegadores e verá
+                    especificidades da popular biblioteca React, com testes
+                    unitários, de integração e de regressão visual nos
+                    componentes de interface. Por fim, aplicará testes de ponta
+                    a ponta (ou end-to-end/e2e), onde o autor simula um fluxo
+                    completo, garantindo que tudo ocorre conforme o esperado.
+                    Tudo isso usando diversas tecnologias como o framework Jest,
+                    Cypress, Loki e muito mais!
+                  </p>
+                </details>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="img_card">
+              <img
+                src="img/Guia Front-end.svg"
+                alt="Imersão React"
+                class="card__capa"
+              />
+            </div>
+            <div class="article-card">
+              <h2 class="card__title">Guia Front-End</h2>
+              <p class="card__subTitle">
+                O caminho das pedras para ser um dev Front-End
+              </p>
+            </div>
+            <div class="card-detalhes">
+              <div class="detalhar">
+                <details id="detalhes">
+                    <summary></summary>
+                  <p class="card__descricao">
+                    Dúvidas, tempo, tecnologias, mercado, mais dúvidas. Será que
+                    existe um verdadeiro caminho das pedras que devemos
+                    percorrer para nos tornarmos bons e verdadeiros
+                    desenvolvedores front-end? O que estudar? Qual blog ler? Que
+                    fóruns acompanhar? Como participar da comunidade? Será que
+                    estou no caminho certo? Se você é desenvolvedor front-end,
+                    quer entrar na área ou busca se tornar um grande
+                    profissional, essas dúvidas já devem ter passado por sua
+                    cabeça. Neste livro, Diego Eis nos guia sobre o mundo de
+                    desenvolvimento web por meio de uma análise franca e
+                    objetiva de diversas tecnologias adotadas, necessidades do
+                    mercado e postura profissional. Você não vai aprender
+                    diretamente sobre essas tecnologias aqui, mas certamente vai
+                    desenvolver um senso mais apurado e uma nova forma de olhar
+                    para elas, o que é fundamental nesse mundo de aprendizado
+                    não linear.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="rodapé">
+      <h2 class="rodapé__titulo">Tech Livros</h2>
+      <ul class="lista-rodapé">
+        <li class="lista-rodapé__titulo">Educação</li>
+        <li class="lista-rodapé__item">
+          <img src="img/CasaDoCodigo.svg" alt="Logo da casa do código" />
+          <a href="#" class="lista-rodapé__link">Casa do código</a>
+        </li>
+        <li class="lista-rodapé__item">
+          <img src="img/Caelum.svg" alt="Logo da caelum" />
+          <a href="#" class="lista-rodapé__link">Caelum</a>
+        </li>
+      </ul>
+
+      <ul class="lista-rodapé">
+        <li class="lista-rodapé__titulo">Educação online</li>
+        <li class="lista-rodapé__item">
+          <img src="img/MusicDot.svg" alt="Logo da Music Dot" />
+          <a href="#" class="lista-rodapé__link">Music Dot</a>
+        </li>
+        <li class="lista-rodapé__item">
+          <img src="img/PM3.svg" alt="Logo da PM3" />
+          <a href="#" class="lista-rodapé__link">PM3</a>
+        </li>
+      </ul>
+
+      <ul class="lista-rodapé">
+        <li class="lista-rodapé__titulo">Comunidade</li>
+
+        <li class="lista-rodapé__item">
+          <img src="img/ScubaDev.svg" alt="Logo do Scuba Dev" />
+          <a href="#" class="lista-rodapé__link">Scuba Dev</a>
+        </li>
+        <li class="lista-rodapé__item">
+          <img src="img/LikeABoss.svg" alt="Logo do Like a Boss" />
+          <a href="#" class="lista-rodapé__link">Like a Boss</a>
+        </li>
+
+        <li class="lista-rodapé__item">
+          <img src="img/GUJ.svg" alt="Logo do GUJ" />
+          <a href="#" class="lista-rodapé__link">GUJ</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
