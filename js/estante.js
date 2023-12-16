@@ -1,3 +1,4 @@
+feature_estante
 
 let descricao = document.querySelectorAll(".card__descricao");
 const playOpen = document.querySelectorAll(".open");
@@ -17,4 +18,16 @@ btn.forEach(function (btn) {
 
 })
 
+
+
+// $('.open').click(function(e){
+//     alert("is working!");
+// });
+
+function show(){
+    if($('.ocultar').val()=="esconde")
+    jQuery('.mostrarOuEsconder').hide();
+    if($('.mostra').val()=="mostra")
+    jQuery('.mostrarOuEsconder').show();
+}
 

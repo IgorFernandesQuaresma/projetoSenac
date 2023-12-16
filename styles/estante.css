@@ -140,8 +140,9 @@ section .estante {
 .card {
     height: 460px;
     width: 50%;
-    margin: 35px 20px 35px 20px;
-    box-shadow: 20px 20px 15px rgba(0, 0, 0, 1.8);
+    margin: 40px 30px 35px 30px;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 1.8);
+    padding: 15px 15px;
 }
 
 .card-ativo{
@@ -165,12 +166,14 @@ section .estante {
 
  
 .img_card img {
-    width: 70%;
-    box-shadow: 15px 15px 10px rgba(0, 0, 0, 1.4);
+    width: 45%;
+    box-shadow: 25px 25px 15px rgba(0, 0, 0, 1.4);
     margin: 10px 5px;
 }
 
 .article-card {
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, 1.4); 
     font-size: 20px;
     font-weight: bolder;
 }

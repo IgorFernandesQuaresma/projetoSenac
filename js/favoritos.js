@@ -16,18 +16,24 @@ function addElements (item) {
         <img id="favoritos-button-sacola" src="./img/Compras.svg" alt="icone de sacola">
         </img> ${item.preco} </button>
     </li>
-`
 }
 
 items.forEach(item => {
     htmlItens += addElements(item)
-<<<<<<< Updated upstream
+
+
 }
     )
 
+
+})
+
     console.log({ul})
-=======
+
 })
     
->>>>>>> Stashed changes
+
 ul.innerHTML = htmlItens
+
+
+
