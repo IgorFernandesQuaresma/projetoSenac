@@ -16,13 +16,23 @@ function addElements (item) {
         <img id="favoritos-button-sacola" src="./img/Compras.svg" alt="icone de sacola">
         </img> ${item.preco} </button>
     </li>
-`
 }
 
 items.forEach(item => {
     htmlItens += addElements(item)
+
+
+}
+    )
+
+
 })
+
     console.log({ul})
+
+})
+    
+
 ul.innerHTML = htmlItens
 
 
