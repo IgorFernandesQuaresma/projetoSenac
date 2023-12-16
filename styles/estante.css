@@ -141,7 +141,8 @@ section .estante {
     height: 460px;
     width: 50%;
     margin: 40px 30px 35px 30px;
-    box-shadow: 20px 20px 15px rgba(0, 0, 0, 1.8);
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 1.8);
+    padding: 15px 15px;
 }
 
 .img_card img {
@@ -151,6 +152,8 @@ section .estante {
 }
 
 .article-card {
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, 1.4); 
     font-size: 20px;
     font-weight: bolder;
 }

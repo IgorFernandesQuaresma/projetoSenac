@@ -24,7 +24,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="./js/estante.js" defer></script>
+  
   </head>
   <body>
     <header class="cabeçalho">
@@ -138,14 +138,14 @@
         <h3 class="estante__titulo">Minha Estante</h3>
         <div class="cards">
           <div class="card">
-            <div class="img_card">
+            <div class="img_card ocultar" value="esconde" >
               <img
                 src="img/ApacheKafka.svg"
                 alt="Imersão React"
                 class="card__capa"
               />
             </div>
-            <div class="article-card">
+            <div class="article-card" id="ocultar">
               <h2 class="card__title">Apache kafka e Spring boot</h2>
               <p class="card__subTitle">
                 comunicação assíncrona entre microsserviços
@@ -154,7 +154,7 @@
             <div class="card-detalhes">
               <div class="detalhar">
                 <details id="detalhes">
-                    <summary></summary>
+                    <summary class="open" value="mostra"></summary>
                   <p class="card__descricao">
                     Pensar em comunicação assíncrona entre microsserviços é um
                     caminho interessante quando a aplicação demanda serviços que
@@ -184,7 +184,7 @@
           </div>
 
           <div class="card">
-            <div class="img_card">
+            <div class="img_card ocultar" value="esconde">
               <img
                 src="img/Javascript.svg"
                 alt="Imersão React"
@@ -200,7 +200,7 @@
             <div class="card-detalhes">
               <div class="detalhar">
                 <details id="detalhes">
-                    <summary></summary>
+                    <summary class="open" value="mostra"></summary>
                   <p class="card__descricao" id="detalhes">
                     Neste livro, Gabriel Ramos aborda as peculiaridades dos
                     vários tipos de testes que compõem a pirâmide de testes, de
@@ -225,7 +225,7 @@
           </div>
 
           <div class="card">
-            <div class="img_card">
+            <div class="img_card ocultar" value="esconde">
               <img
                 src="img/Guia Front-end.svg"
                 alt="Imersão React"
@@ -241,7 +241,7 @@
             <div class="card-detalhes">
               <div class="detalhar">
                 <details id="detalhes">
-                    <summary></summary>
+                    <summary onchange="show()" class="open" value="mostra"></summary>
                   <p class="card__descricao">
                     Dúvidas, tempo, tecnologias, mercado, mais dúvidas. Será que
                     existe um verdadeiro caminho das pedras que devemos
@@ -312,5 +312,8 @@
         </li>
       </ul>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/estante.js" defer></script>
   </body>
 </html>
