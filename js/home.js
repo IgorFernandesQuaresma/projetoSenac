@@ -57,14 +57,14 @@ console.log('fsdf', ulFavoritosPgFavoritos);
   };
   //faz o loop de forma dinamica e coloca na tela
  
-    itens.forEach(itens => {
-        const itemFavoritos = criarItemLoja(itens);
-        ulFavoritos.appendChild(itemFavoritos);
-        const imgLojaIcon = itemFavoritos.querySelector('#loja__favoritos-icon'); 
-        imgLojaIcon.addEventListener('click', function() {
-          adicionarAosFavoritos(itens); 
-        })
-    })  
+  itens.forEach(itens => {
+    const itemFavoritos = criarItemLoja(itens);
+    ulFavoritos.appendChild(itemFavoritos);
+    const imgLojaIcon = itemFavoritos.querySelector('#loja__favoritos-icon'); 
+    imgLojaIcon.addEventListener('click', function() {
+      adicionarAosFavoritos(itens); 
+    })
+})  
   
     
 

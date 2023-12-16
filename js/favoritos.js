@@ -21,8 +21,13 @@ function addElements (item) {
 
 items.forEach(item => {
     htmlItens += addElements(item)
+<<<<<<< Updated upstream
 }
     )
 
     console.log({ul})
+=======
+})
+    
+>>>>>>> Stashed changes
 ul.innerHTML = htmlItens

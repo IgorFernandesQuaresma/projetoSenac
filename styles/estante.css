@@ -144,6 +144,26 @@ section .estante {
     box-shadow: 20px 20px 15px rgba(0, 0, 0, 1.8);
 }
 
+.card-ativo{
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: justify;
+    letter-spacing: 1px;
+    padding: 10px;
+    box-shadow: 2px #c2c2c2;
+    position: absolute;
+    height: 450px;
+    width: 320px;
+    margin-top: 100px;
+    z-index: 1;
+   }
+
+   .inativo {
+    display: none;
+   
+   }
+
+ 
 .img_card img {
     width: 70%;
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 1.4);
@@ -166,8 +186,6 @@ section .estante {
     font-weight: 600;
     opacity: 0.8;
 }
-
-
 
 hr {
     margin: 0;
