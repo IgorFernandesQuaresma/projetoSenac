@@ -24,13 +24,15 @@ document.addEventListener('DOMContentLoaded', function () {
       tópicosVisitados.forEach((tópico) => {
         const itemTópico = document.createElement('li');
         const linkTópico = document.createElement('a');
+        itemTópico.classList.add('tópicos__item')
+        linkTópico.classList.add('tópicos__link')
   
         // Defina a URL adequada para o tópico, se necessário
         linkTópico.href = '#';
         linkTópico.textContent = tópico;
-  
         itemTópico.appendChild(linkTópico);
         listaTópicos.appendChild(itemTópico);
+       
       });
     }
   
@@ -43,9 +45,13 @@ document.addEventListener('DOMContentLoaded', function () {
       categoria.addEventListener('click', function (event) {
         // Evita que o link da categoria seja seguido
         event.preventDefault();
-  
+        //itemTópico.classList.add('tópicos__item')
+        //linkTópico.classList.add('tópico__link')
+        
         // Obtém o texto do tópico a partir do conteúdo do link
         const tópico = categoria.textContent.trim();
+        
+        
   
         // Adiciona o tópico à lista de tópicos visitados recentemente
         adicionarTópico(tópico);

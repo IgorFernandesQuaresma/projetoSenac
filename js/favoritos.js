@@ -21,8 +21,9 @@ function addElements (item) {
 
 items.forEach(item => {
     htmlItens += addElements(item)
-}
-    )
-
+})
     console.log({ul})
 ul.innerHTML = htmlItens
+
+
+
